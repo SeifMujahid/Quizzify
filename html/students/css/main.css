@@ -1,0 +1,236 @@
+:root {
+  --main-color: #450773;
+  --secondary-color: #23104b;
+  --third-color: #a55ff2;
+  --white-color: #ffffff;
+  --p-20: 20px;
+  --border-rd: 20px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  box-shadow: 0px 0px 10px gray inset;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+/* <------------------------------------------------------------------------------------------> */
+/* start body  */
+body {
+  background-image: linear-gradient(
+    to left bottom,
+    var(--main-color),
+    var(--secondary-color)
+  );
+  height: 100vh;
+  color: var(--white-color);
+}
+.left-nav {
+  width: 300px;
+}
+.left-nav ul li {
+  padding: 5px 20px;
+  transition: 0.3s;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.left-nav ul li:hover {
+  background-color: var(--third-color);
+}
+.left-nav ul li:hover i {
+  color: var(--secondary-color);
+}
+/* --------------------------------------------------------------------------------------------------- */
+.ranking {
+  overflow: auto;
+  margin-left: 300px;
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.down-grade {
+  color: tomato;
+  position: relative;
+}
+.down-grade::after {
+  content: "\f063";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: 5px;
+}
+.up-grade {
+  color: rgb(5, 221, 5);
+}
+.up-grade::after {
+  content: "\f062";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: 5px;
+}
+.not-view {
+  opacity: 0.5;
+}
+.odd {
+  background-color: var(--secondary-color);
+}
+table {
+  width: 100%;
+  background-color: var(--main-color);
+  min-height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.w-10 {
+  width: 10%;
+}
+.w-15 {
+  width: 15%;
+}
+.w-70 {
+  width: 70%;
+}
+.odd {
+  background-color: var(--secondary-color);
+}
+table thead tr th {
+  padding: 15px 0px;
+}
+table tr td:not(:nth-child(2)) {
+  min-height: 50px;
+  margin-bottom: 5px;
+  text-align: center;
+  padding: 10px 0px;
+  font-weight: 500;
+}
+/* <------------------------------------------------------------------------------------------> */
+.modal-dialog {
+  width: 900px !important;
+}
+.modal-content {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .left-nav {
+    width: 70px;
+  }
+  .left-nav h1 {
+    font-size: 1rem;
+  }
+  .left-nav ul li {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .left-nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  .left-nav ul li i {
+    margin-left: 25px;
+  }
+  .left-nav ul li span {
+    display: none;
+  }
+  .ranking {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+}
+
+@media (max-width: 768px) {
+  .left-nav {
+    width: 70px;
+  }
+  .left-nav h1 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .left-nav ul li {
+    padding: 8px;
+  }
+  .left-nav ul li i {
+    margin-left: 25px;
+  }
+  .ranking {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .left-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50px;
+    z-index: 1000;
+  }
+  .ranking {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+  table {
+    font-size: 0.75rem;
+  }
+  .modal-dialog {
+    width: 90%;
+  }
+}
